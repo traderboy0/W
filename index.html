@@ -2,148 +2,145 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Deepak Wadhwa - Learning Community</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gokul Chhabra - Daily Market Updates</title>
 <style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: #000;
+    background: #0a0a0a;
+    color: #fff;
+    font-family: 'Georgia', 'Times New Roman', serif;
     display: flex;
     justify-content: center;
-    align-items: center;
+    padding: 24px 16px 40px;
     min-height: 100vh;
   }
-
   .card {
-    width: 85%;
-    max-width: 340px; 
-    background: #010a0f;
-    border: 1.5px solid #00d2ff;
-    border-radius: 35px;
-    padding: 20px 15px;
+    width: 100%;
+    max-width: 420px;
     text-align: center;
-    box-shadow: 0 0 25px rgba(0, 210, 255, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
   }
-
-  .profile-img {
-    width: 110px;
-    height: 110px;
+  .logo-wrap {
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    border: 3px solid #00d2ff;
-    object-fit: cover;
-    margin-top: -5px;
-    box-shadow: 0 0 15px #00d2ff;
+    padding: 5px;
+    background: linear-gradient(135deg, #f4c430, #d4a017);
+    box-shadow: 0 0 20px rgba(244,196,48,0.35);
   }
-
+  .logo-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+  }
   h1 {
-    color: #fff;
-    font-size: 20px;
-    margin: 15px 0;
+    font-size: clamp(26px, 7vw, 34px);
+    color: #f4c430;
+    line-height: 1.25;
     text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: -10px;
+  }
+  .tagline {
+    font-size: clamp(12px, 3.5vw, 14px);
+    color: #999;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+  .headline {
+    font-size: clamp(20px, 6vw, 26px);
+    font-weight: bold;
+  }
+  .subline {
+    font-size: clamp(15px, 4.5vw, 18px);
+    color: #cfcfcf;
     letter-spacing: 1px;
   }
-
-  .features {
-    text-align: left;
-    margin: 0 auto;
-    width: 90%;
+  .cta {
+    display: inline-block;
+    width: 100%;
+    padding: 16px 18px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #2fc7ff, #2b7dff);
+    color: #fff;
+    text-decoration: none;
+    font-size: clamp(16px, 4.5vw, 19px);
+    font-weight: bold;
+    box-shadow: 0 6px 18px rgba(43,125,255,0.35);
   }
-
-  .feature-item {
-    color: #ccc;
-    font-size: 13px;
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  ul.features {
+    list-style: none;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  ul.features li {
+    font-size: clamp(16px, 4.5vw, 19px);
     display: flex;
     align-items: center;
+    gap: 12px;
   }
-
-  .feature-item:last-child { border-bottom: none; }
-
-  .icon { margin-right: 12px; font-size: 16px; }
-
-  .join-text {
-    color: #eee;
-    font-size: 12px;
-    margin: 20px 0 12px;
-    font-weight: 300;
+  ul.features li::before {
+    content: "✔";
+    color: #b7b7b7;
+    flex-shrink: 0;
   }
-
-  .telegram-btn {
-    display: block;
-    background: linear-gradient(90deg, #00d2ff 0%, #9247ff 100%);
-    color: white;
-    text-decoration: none;
-    padding: 14px;
-    border-radius: 50px;
-    font-weight: bold;
-    font-size: 16px;
-    margin-bottom: 15px;
-    box-shadow: 0 4px 12px rgba(0, 210, 255, 0.3);
-  }
-
-  .hindi-quote {
-    color: #bbb;
-    font-size: 13px;
-    margin-bottom: 20px;
+  .warning {
+    color: #f4c430;
+    font-size: clamp(14px, 4vw, 17px);
     line-height: 1.4;
   }
-
-  .footer-box {
-    border: 1px solid rgba(0, 210, 255, 0.2);
-    border-radius: 12px;
-    padding: 8px;
-    font-size: 11px;
-    color: #888;
+  .promo {
+    margin-top: 8px;
+    width: 100%;
+    padding: 14px;
+    border-left: 4px solid #0c5c4c;
+    border-right: 4px solid #0c5c4c;
+    background: rgba(255,255,255,0.03);
+    border-radius: 8px;
   }
-
-  /* Link styling for Agency */
-  .footer-box a { 
-    color: #00d2ff; 
-    font-weight: bold; 
+  .promo a {
+    color: #f4c430;
+    font-weight: bold;
     text-decoration: none;
   }
-
-  .disclaimer {
-    font-size: 9px;
-    color: #444;
-    margin-top: 12px;
-  }
+  .promo span { color: #aaa; font-size: 14px; }
 </style>
 </head>
 <body>
+  <div class="card">
+    <div class="logo-wrap">
+      <img src="https://i.ibb.co/gZKSG1gF/In-Shot-20260923-192400574.jpg" alt="Gokul Chhabra">
+    </div>
 
-<div class="card">
-  <img src="https://i.ibb.co/FkV61CBG/711752123-122102238423341553-4586529772719677765-n.jpg" alt="Munaaf" class="profile-img">
+    <h1>GOKUL CHHABRA</h1>
+    <div class="tagline">MARKET ANALYST &amp; MENTOR</div>
 
-  <h1>Munaaf</h1>
+    <div class="headline">⚡ ELITE MARKET INSIGHTS ⚡</div>
+    <div class="subline">NIFTY  ·  BANKNIFTY  ·  STOCK OPTIONS</div>
 
-  <div class="features">
-    <div class="feature-item"><span class="icon"></span> Learning & Educational Sessions</div>
-    <div class="feature-item"><span class="icon"></span> Market Concepts & Awareness</div>
-    <div class="feature-item"><span class="icon"></span> Chart Reading Concepts</div>
-    <div class="feature-item"><span class="icon"></span> Educational Case Discussions</div>
+    <a class="cta" href="https://t.me/+LSC8JSNn-35iMGI1" target="_blank">🚀 JOIN FREE TELEGRAM →</a>
+
+    <ul class="features">
+      <li>Exclusive Daily Market Briefings</li>
+      <li>Curated F&amp;O Insights for Study Purpose Only</li>
+      <li>Precision Intraday &amp; Swing Setups</li>
+      <li>Crafted for First-Time Investors</li>
+    </ul>
+
+    <div class="warning">⚠️ Market Investments are subject to Market Risks</div>
+
+    <div class="promo">
+      <span>Promoted By </span><a href="https://t.me/+3XoqJNLxYHswNTc1" target="_blank">AD BUILD AGENCY</a>
+    </div>
   </div>
-
-  <p class="join-text">Join our learning community and grow your knowledge</p>
-
-  <a href="https://t.me/+VQKcLntbMYhjOGJl" class="telegram-btn">JOIN TELEGRAM</a>
-
-  <p class="hindi-quote">     ,     </p>
-
-  <div class="footer-box">
-    This Channel Advertise By <a href="https://t.me/+3XoqJNLxYHswNTc1" target="_blank">AD BUILD AGENCY</a>
-  </div>
-
-  <div class="disclaimer">
-    Terms | Privacy | Disclaimer <br>
-    This site is not part of Facebook� or endorsed by Facebook�.
-  </div>
-</div>
-
 </body>
 </html>
